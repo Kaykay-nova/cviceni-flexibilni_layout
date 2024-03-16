@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 ::after,
 ::before {
@@ -24,6 +25,35 @@ h1 {
 p {
   font-family: Homemade Apple;
   font-size: 1.5rem;
+  text-align: right;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.galerie {
+  display: flex;
+  flex-direction: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.foto {
+  flex-basis: 50%;
+}
+
+@media (min-width: 600px) {
+  .foto {
+    flex-basis: calc(100% /3);
+  }  
+}
+
+@media (min-width: 1000px) {
+  .foto {
+    flex-basis: calc(100% /4); 
+  }
 }
 
 /*
@@ -34,5 +64,3 @@ Potom zkuste třeba tři nebo čtyři sloupce.
 
 Pro každou variantu si pomocí devtools udělejte screenshot.
 */
-
-
